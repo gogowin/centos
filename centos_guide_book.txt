@@ -1,0 +1,26 @@
+Yellowdog Updater, Modified (yum)
+To install software Centos uses the yum package manager. 
+RPM (RedHat Package Manage)
+Under the hood, yum uses RPM packages, which are named for RedHat Package Manager. Because CentOS is based on RedHat, it inherits RedHat's package management scheme. In this movie, I'll go over some of the options available to you using yum.First, let's install some software. The minimal CentOS install doesn't come with a package that Ithink is really useful, called wget.
+
+# sudo yum install wget
+
+Install zip and unzip.
+# sudo yum install zip unzip
+
+Updating software. 
+# yum check-update
+Install all updates
+# sudo yum update
+Remove a package - example remove zip package
+# sudo yum remove zip
+
+Installing packages by group with Yum
+Explore what packages are available
+# yum grouplist
+Find out more about a group
+# yum groupinfo "Basic Web Server"
+I can see that there are some optional groups too, again these are what are available in the installation environment. I can just tack them on to the end of my command to install them, group name and some of the optional packages.
+# sudo yum groupinstall "Basic Web Services" php
+To re
+# sudo yum groupremove "Basic Web Services" php
