@@ -1,1 +1,1 @@
-About this project.
+This project is about installing CentOS on a remote cloud server and configuring it as a web server.
