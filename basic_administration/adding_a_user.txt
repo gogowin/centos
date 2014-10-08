@@ -35,7 +35,16 @@ Logout
 
 Disable the ability of the root user to log in via SSH
 
+sudo vi /etc/ssh/sshd_config
+/PermitRootLogin
+Insert mode - type i
+PermitRootLogin from yes to no
+escape
+wq
 
+Restart service 
+
+# sudo service sshd restart
 
 
 
