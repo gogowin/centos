@@ -1,0 +1,66 @@
+Adding a user with sudo privileges for SSH access
+
+# useradd john
+
+Create a home folder and a hidden folder that SSH expects within that home folder. Normally, this is two commands but you can use the -p flag with the mkdir command to tell the system to create folders as necessary. 
+
+# mkdir -p /home/john/.ssh
+# ls -lah /home/john
+
+Set up password for user John
+
+# passwd john
+
+Need to add john to the sudoers file, but not directly.
+
+# visudo
+/(ALL)
+then hi "i" for insert
+
+Underneith the line that reads:
+root 	ALL=(ALL)	ALL
+
+Add this
+
+john 	ALL=(ALL) 	ALL
+
+Then
+
+esc
+wq
+
+Logout
+
+# logut
+
+Disable the ability of the root user to log in via SSH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_
